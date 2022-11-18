@@ -1,6 +1,10 @@
 import React from 'react';
 import Dropdown from 'react-dropdown';
 import { CSVLink } from 'react-csv';
+import { useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux';
+import { IMonth } from './models/models';
+import { addMonth } from './store/remainderMonthsSlice';
 
 
 const options = [
@@ -20,6 +24,7 @@ const headers = [
 ];
 
 function App() {
+  const dispatch = useDispatch();
   return (
     <div className="container">
        <Dropdown
