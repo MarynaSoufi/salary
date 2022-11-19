@@ -4,7 +4,16 @@ export interface IMonth {
 }
 
 export interface IFile {
-  month: string,
+  month: string | number | React.ReactNode,
   salaryDate: string,
   bonusDate: string,
+}
+
+export interface IOption {
+  label:string |  React.ReactNode;
+  value: string;
+  className?: string;
+  data?: {
+    [dataAttribute: string]: string | number
+  };
 }

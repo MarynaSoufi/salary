@@ -3,7 +3,7 @@ import Dropdown, { Option } from 'react-dropdown';
 import { CSVLink } from 'react-csv';
 import { useDispatch } from 'react-redux';
 import { useSelector } from 'react-redux';
-import { IFile, IMonth } from './models/models';
+import { IFile, IMonth, IOption } from './models/models';
 import { getRemainderMonths } from './utils/getRemainderMonths';
 import { getMonthFromString } from './utils/getMonthNumber';
 import { addMonth } from './store/remainderMonthsSlice';
@@ -39,15 +39,15 @@ useEffect(() => {
   dispatch(addMonth([{ value: 13, label: 'All mounths' }, ...months]));
 }, [dispatch, salary]);
 
-const salaryHandler = (e: IMonth  | any) => {
+const salaryHandler = (e:IOption) => {
   console.log('e,',e)
   let output:IFile[];
-  if (e.value !== 13) {
+  if (+e.value !== 13) {
       output = [
           {
               month: e.label,
-              salaryDate: getSalaryDate(e.value),
-              bonusDate: getBonusDate(e.value),
+              salaryDate: getSalaryDate(+e.value),
+              bonusDate: getBonusDate(+e.value),
           },
       ];
   } else {
