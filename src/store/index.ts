@@ -1,9 +1,11 @@
 import { configureStore } from '@reduxjs/toolkit';
 import { monthSlice } from './remainderMonthsSlice';
+import { salarySlice } from './salarySlice';
 
 const store = configureStore({
   reducer: {
       month: monthSlice.reducer,
+      salary: salarySlice.reducer,
   },
 });
 
