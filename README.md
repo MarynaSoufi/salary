@@ -28,8 +28,8 @@ React, Typescript, Redux Toolkit, Moment Js, React-csv, React-dropdown, Tailwind
 ### With local version
 
 -   Clone the repo or download ZIP from [https://github.com/MarynaSoufi/salary](https://github.com/MarynaSoufi/salary)
--   Run ### npm install
--   Run ### npm start
--   Go to ### localhost:3000
+-   Run **npm install**
+-   Run **npm start**
+-   Go to **localhost:3000**
 -   Choose a month
 -   Download csv
