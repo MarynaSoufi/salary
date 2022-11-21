@@ -21,7 +21,7 @@ React, Typescript, Redux Toolkit, Moment Js, React-csv, React-dropdown, Tailwind
 
 ### With deployed version
 
--   Go to [Deployed version] (https://marynasoufi.github.io/salary/)
+-   Go to [Deployed version](https://marynasoufi.github.io/salary/)
 -   Choose a month
 -   Download csv
 
